@@ -1,0 +1,27 @@
+AppBundle\Entity\Nearearthobjects:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\NearearthobjectsRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        date:
+            type: string
+        reference:
+            type: string
+            length: 255
+            unique: true
+        name:
+            type: string
+            length: 255
+        speed:
+            type: string
+            length: 255
+        ishazardous:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

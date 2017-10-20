@@ -1,0 +1,30 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation 
+
+last3days_list:
+    path:     /last3days/list
+    defaults: { _controller: AppBundle:Last3days:list }
+
+last3days_show:
+    path:     /last3days/show
+    defaults: { _controller: AppBundle:Last3days:show }
+
+neo_hazardous:
+    path:     /neo/hazardous
+    defaults: { _controller: AppBundle:Neo:hazardous }
+
+
+neo_fastest:
+    path:     /neo/fastest/hazardous={hazardous}
+    defaults: { _controller: AppBundle:Neo:fastest, hazardous:"false"}
+
+
+neo_bestyear:
+    path:     /neo/best-year/hazardous={hazardous}
+    defaults: { _controller: AppBundle:Neo:bestyear, hazardous:"false"}
+
+neo_bestmonth:
+    path:     /neo/best-month/hazardous={hazardous}
+    defaults: { _controller: AppBundle:Neo:bestmonth, hazardous:"false"}
+
